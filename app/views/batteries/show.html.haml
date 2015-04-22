@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Size:
+  = @battery.size
+%p
+  %strong Technology:
+  = @battery.technology
+%p
+  %strong Brand:
+  = @battery.brand
+= link_to 'Edit', edit_battery_path(@battery)
+|
+= link_to 'Back', batteries_path

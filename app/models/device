@@ -1,0 +1,9 @@
+device
+max length on batteries to device.slots
+
+
+
+cycle
+adding or replacing?
+adding: enter lookup of battery
+replacing: enter lookups of both batteries

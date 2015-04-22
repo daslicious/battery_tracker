@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Listing Batteries
+%table
+  %thead
+    %tr
+      %th Size
+      %th Technology
+      %th Brand
+      %th{:colspan => "3"}
+  %tbody
+    - @batteries.each do |battery|
+      %tr
+        %td= battery.size
+        %td= battery.technology
+        %td= battery.brand
+        %td= link_to 'Show', battery
+        %td= link_to 'Edit', edit_battery_path(battery)
+        %td= link_to 'Destroy', battery, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Battery', new_battery_path

@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Battery:
+  = @cycle.battery
+%p
+  %strong Device:
+  = @cycle.device
+= link_to 'Edit', edit_cycle_path(@cycle)
+|
+= link_to 'Back', cycles_path

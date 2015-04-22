@@ -1,0 +1,17 @@
+= simple_form_for(@device) do |f|
+  - if @device.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@device.errors.count, "error")
+        prohibited this device from being saved:
+      %ul
+        - @device.errors.full_messages.each do |message|
+          %li= message
+  = f.input :location
+  = f.input :name
+  = f.input :remote, as: :radio_buttons
+  = f.input :slots
+  = f.input :battery_size
+  = f.input :lookup
+  .actions
+  = f.submit
